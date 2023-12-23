@@ -1,7 +1,7 @@
-KUBECTL := minikube kubectl
+KUBECTL := kubectl
 
 cassandra:
-	$(KUBECTL) apply -f apache-cassandra-namespace.yml
-	$(KUBECTL) apply -f apache-cassndra-service.yml
-	$(KUBECTL) apply -f apache-cassandra-configmap.yml
-	$(KUBECTL) apply -f apache-cassandra-statefulset.yml
+	minikube $(KUBECTL) apply -f apache-cassandra-namespace.yml
+	minikube $(KUBECTL) apply -f apache-cassndra-service.yml
+	minikube $(KUBECTL) apply -f apache-cassandra-configmap.yml
+	minikube $(KUBECTL) apply -f apache-cassandra-statefulset.yml
