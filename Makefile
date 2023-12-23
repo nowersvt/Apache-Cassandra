@@ -1,4 +1,4 @@
-KUBECTL := miinikube kubectl
+KUBECTL := minikube kubectl
 
 cassandra:
 	 $(KUBECTL) config set-context cassandra --namespace=cassandra
